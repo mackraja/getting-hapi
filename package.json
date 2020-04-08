@@ -7,6 +7,7 @@
     "start": "nodemon --exec babel-node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "db": "sequelize db:create && sequelize db:migrate && sequelize db:seed:all",
+    "heroku-prebuild": "sequelize db:migrate:undo:all",
     "heroku-postbuild": "sequelize db:migrate && sequelize db:seed:all",
     "lint": "eslint .",
     "fixlint": "eslint . --fix"

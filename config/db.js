@@ -18,20 +18,6 @@ module.exports = {
       idleTimeoutMillis: 300000,
     },
   },
-  test: {
-    username: '',
-    password: '',
-    database: '',
-    host: 'localhost',
-    dialect: 'postgres',
-  },
-  staging: {
-    username: '',
-    password: '',
-    database: '',
-    host: 'localhost',
-    dialect: 'postgres',
-  },
   production: {
     use_env_variable: 'DATABASE_URL',
     dialect: 'postgres',
