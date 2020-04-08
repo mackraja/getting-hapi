@@ -30,7 +30,7 @@ First, you have to add `.env` file at root and add required key/value pair, Also
 
 `DB_PASSWORD=password`
 
-`DB_DATABASE=gettingStartedTypeScript`
+`DB_DATABASE=gettingHapi`
 
 `DB_DIALECT=mysql`
 

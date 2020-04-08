@@ -5,7 +5,7 @@ module.exports = {
   development: {
     username: process.env.DB_USERNAME || 'root',
     password: process.env.DB_PASSWORD || 'Bohemia00&',
-    database: process.env.DB_DATABASE || 'gettingStarted',
+    database: process.env.DB_DATABASE || 'gettingHapi',
     host: process.env.DB_HOST || 'localhost',
     dialect: process.env.DB_DIALECT || 'mysql',
     connectionTimeout: 300000,
