@@ -1,0 +1,3 @@
+db/sequelize-schema-file-generator.js
+public/*
+**/*.json

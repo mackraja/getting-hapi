@@ -1,0 +1,63 @@
+{
+  "name": "getting-hapi",
+  "version": "1.0.0",
+  "description": "Backend API's using Hapi 17.x.x",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db": "sequelize db:create && sequelize db:migrate && sequelize db:seed:all",
+    "heroku-postbuild": "sequelize db:migrate && sequelize db:seed:all",
+    "lint": "eslint .",
+    "fixlint": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mackraja/getting-hapi.git"
+  },
+  "keywords": [
+    "Node.Js",
+    "Hapi.Js",
+    "Swagger",
+    "Sequelize"
+  ],
+  "author": "Monty Khanna",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/mackraja/getting-hapi/issues"
+  },
+  "homepage": "https://github.com/mackraja/getting-hapi#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "boom": "^7.3.0",
+    "config": "^2.0.2",
+    "dotenv": "^6.2.0",
+    "good": "^8.1.2",
+    "good-console": "^7.1.0",
+    "good-squeeze": "^5.1.0",
+    "hapi": "^17.8.5",
+    "hapi-auth-jwt2": "^8.6.2",
+    "hapi-authorization": "^4.0.0",
+    "hapi-router": "^4.0.0",
+    "hapi-swagger": "^9.4.2",
+    "i18n": "^0.8.3",
+    "inert": "^5.1.3",
+    "joi": "^13.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^1.7.0",
+    "sequelize": "^4.44.3",
+    "sequelize-cli": "^5.5.1",
+    "vision": "^5.4.4",
+    "nodemon": "^1.19.3",
+    "pg": "^7.18.2",
+    "pg-hstore": "^2.3.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
+}
