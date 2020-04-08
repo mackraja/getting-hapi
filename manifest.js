@@ -12,6 +12,23 @@ import { jwtAuth } from './helpers'; // eslint-disable-line
 
 import * as rootPackage from './package.json';
 
+const corsHeaders = {
+  origin: ["*"],
+  headers: [
+    "Access-Control-Allow-Origin",
+    "Access-Control-Allow-Headers",
+    "Access-Control-Request-Method",
+    "Accept",
+    "Content-Type",
+    "If-None-Match",
+    "Access-Control-Request-Headers",
+    "Connection, Host, Origin, X-Requested-With, Content-Type",
+    "Authorization",
+    "RefreshToken"
+  ],
+  credentials: true,
+};
+
 const hapiSwaggerOptions = {
   pathPrefixSize: 1,
   grouping: 'tags',
@@ -29,7 +46,7 @@ const hapiSwaggerOptions = {
     jwt: {
       type: 'apiKey',
       name: 'Authorization',
-      in: 'header'
+      in: 'header',
     }
   },
   schemes: (process.env.NODE_ENV || 'development') !== 'development' ? ['https'] : ['http'],
@@ -83,6 +100,7 @@ const goodOptions = {
 
 const connections = {
   routes: {
+    cors: corsHeaders,
     files: {
       relativeTo: Path.join(__dirname, './', 'public'),
     },

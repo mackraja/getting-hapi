@@ -12,3 +12,9 @@ exports.authenticate = async username => await User.findOne({
 });
 
 exports.validUser = async id => await User.findByPk(id);
+
+
+exports.getUser = async id => await User.findOne({
+  attributes: ['id', 'first_name', 'last_name', 'username', 'status'],
+  where: { id },
+});
