@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/mackraja/getting-hapi#readme",
   "dependencies": {
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "boom": "^7.3.0",
     "config": "^2.0.2",
     "dotenv": "^6.2.0",
